@@ -119,6 +119,8 @@ LittlerootTown_EventScript_StepOffTruckMale::
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
 	warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 8, 8
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_RECEIVED_RUNNING_SHOES
 	waitstate
 	releaseall
 	end
@@ -394,6 +396,10 @@ LittlerootTown_EventScript_GoSaveBirchTrigger::
 
 LittlerootTown_EventScript_TownSign::
 	msgbox LittlerootTown_Text_TownSign, MSGBOX_SIGN
+	end
+
+LittlerootTown_EventScript_DaveSign::
+	msgbox LittlerootTown_Text_DaveSign, MSGBOX_SIGN
 	end
 
 LittlerootTown_EventScript_BirchsLabSign::
@@ -998,6 +1004,10 @@ LittlerootTown_Text_GoodLuckCatchingPokemon:
 LittlerootTown_Text_TownSign:
 	.string "LITTLEROOT TOWN\n"
 	.string "“A town that can't be shaded any hue.”$"
+
+LittlerootTown_Text_DaveSign:
+	.string "DAVETOWN\n"
+	.string "“Dave was here.”$"
 
 LittlerootTown_Text_ProfBirchsLab:
 	.string "PROF. BIRCH'S POKéMON LAB$"
