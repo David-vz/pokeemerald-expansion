@@ -119,8 +119,6 @@ LittlerootTown_EventScript_StepOffTruckMale::
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
 	warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 8, 8
-	setflag FLAG_SYS_POKEDEX_GET
-	setflag FLAG_RECEIVED_RUNNING_SHOES
 	waitstate
 	releaseall
 	end
@@ -399,6 +397,9 @@ LittlerootTown_EventScript_TownSign::
 	end
 
 LittlerootTown_EventScript_DaveSign::
+	setflag FLAG_SYS_B_DASH
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_POKEDEX_GET
 	msgbox LittlerootTown_Text_DaveSign, MSGBOX_SIGN
 	end
 
@@ -1006,8 +1007,7 @@ LittlerootTown_Text_TownSign:
 	.string "“A town that can't be shaded any hue.”$"
 
 LittlerootTown_Text_DaveSign:
-	.string "DAVETOWN\n"
-	.string "“Dave was here.”$"
+	.string "Debug feats added$"
 
 LittlerootTown_Text_ProfBirchsLab:
 	.string "PROF. BIRCH'S POKéMON LAB$"
@@ -1028,4 +1028,3 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
-

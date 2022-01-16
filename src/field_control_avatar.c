@@ -1028,7 +1028,6 @@ static bool8 EnableAutoRun(void)
         gSaveBlock2Ptr->autoRun = TRUE;
         ScriptContext1_SetupScript(EventScript_EnableAutoRun);
     }
-    
+
     return TRUE;
 }
-

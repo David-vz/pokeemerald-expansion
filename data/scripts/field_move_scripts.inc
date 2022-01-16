@@ -288,7 +288,6 @@ EventScript_FailSweetScent::
 Text_FailSweetScent:
 	.string "Looks like there's nothing here…$"
     
-    
 EventScript_DisableAutoRun::
     msgbox AutoRunDisabled MSGBOX_SIGN
     end
