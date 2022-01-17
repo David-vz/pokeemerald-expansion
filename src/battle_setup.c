@@ -415,7 +415,15 @@ static void DoStandardWildBattle(bool32 isDouble)
         VarSet(VAR_TEMP_E, 0);
         gBattleTypeFlags |= BATTLE_TYPE_PYRAMID;
     }
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
+
+    if (IsMonShiny(&gEnemyParty[0])){
+        CreateBattleStartTask(B_TRANSITION_GROUDON, MUS_RG_VS_DEOXYS);
+    } else {
+        CreateBattleStartTask(GetWildBattleTransition(), 0);
+    }
+
+
+    
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();
@@ -808,6 +816,7 @@ u8 GetWildBattleTransition(void)
     u8 enemyLevel = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
     u8 playerLevel = GetSumOfPlayerPartyLevel(1);
 
+    
     if (enemyLevel < playerLevel)
     {
         if (InBattlePyramid())
