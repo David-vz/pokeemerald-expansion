@@ -82,6 +82,7 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->tookStep = FALSE;
     input->pressedBButton = FALSE;
     input->pressedRButton = FALSE;
+    input->input_field_1_0 = FALSE;
     input->input_field_1_1 = FALSE;
     input->input_field_1_2 = FALSE;
     input->input_field_1_3 = FALSE;
@@ -106,15 +107,10 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)
                 input->pressedBButton = TRUE;
-            #if DEBUGGING
-                if ((heldKeys & L_BUTTON) && input->pressedStartButton)
-                {
-                    input->input_field_1_2 = TRUE;
-                    input->pressedStartButton = FALSE;
-                }
-            #endif
             if (newKeys & R_BUTTON)
                 input->pressedRButton = TRUE;
+            if (newKeys & L_BUTTON)
+                input->pressedLButton = TRUE;
         }
 
         if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
@@ -146,7 +142,7 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
     #ifdef TX_DEBUGGING
         if (!TX_DEBUG_MENU_OPTION)
         {
-            if (heldKeys & R_BUTTON) 
+            if (heldKeys & L_BUTTON) 
             {
                 if(input->pressedSelectButton)
                 {
@@ -155,18 +151,6 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 }else if(input->pressedStartButton) 
                 {
                     input->input_field_1_2 = TRUE;
-                    input->pressedStartButton = FALSE;
-                }
-            }
-            if (heldKeys & L_BUTTON) 
-            {
-                if(input->pressedSelectButton)
-                {
-                    input->input_field_1_1 = TRUE;
-                    input->pressedSelectButton = FALSE;
-                }else if(input->pressedStartButton) 
-                {
-                    input->input_field_1_3 = TRUE;
                     input->pressedStartButton = FALSE;
                 }
             }
@@ -233,15 +217,6 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     
     if (input->pressedRButton && EnableAutoRun())
         return TRUE;
-
-    #if DEBUGGING
-        if (input->input_field_1_2)
-        {
-            PlaySE(SE_WIN_OPEN);
-            Debug_ShowMainMenu();
-            return TRUE;
-        }
-    #endif
 
     #ifdef TX_DEBUGGING
         if (!TX_DEBUG_MENU_OPTION)
