@@ -307,6 +307,13 @@ ifeq ($(DINFO),1)
 override CFLAGS += -g
 endif
 
+# debug flags, following https://github.com/pret/pokeemerald/wiki/Add-a-debug-menu
+
+ifeq ($(DDEBUGGING),1)
+override ASFLAGS += --defsym DEBUGGING=1
+override CPPFLAGS += -D DEBUGGING=1
+endif
+
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.
 # It doesn't look like $(shell) can be deferred so there might not be a better way.

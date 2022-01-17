@@ -3,6 +3,7 @@
 #include "bike.h"
 #include "coord_event_weather.h"
 #include "daycare.h"
+#include "debug.h"
 #include "faraway_island.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -105,6 +106,13 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)
                 input->pressedBButton = TRUE;
+            #if DEBUGGING
+                if ((heldKeys & L_BUTTON) && input->pressedStartButton)
+                {
+                    input->input_field_1_2 = TRUE;
+                    input->pressedStartButton = FALSE;
+                }
+            #endif
             if (newKeys & R_BUTTON)
                 input->pressedRButton = TRUE;
         }
@@ -114,6 +122,7 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
             input->heldDirection = TRUE;
             input->heldDirection2 = TRUE;
         }
+        
     }
 
     if (forcedMove == FALSE)
@@ -194,8 +203,19 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->pressedRButton && EnableAutoRun())
         return TRUE;
 
+    #if DEBUGGING
+        if (input->input_field_1_2)
+        {
+            PlaySE(SE_WIN_OPEN);
+            Debug_ShowMainMenu();
+            return TRUE;
+        }
+    #endif
+
     return FALSE;
 }
+
+    
 
 static void GetPlayerPosition(struct MapPosition *position)
 {
