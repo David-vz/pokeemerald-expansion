@@ -698,11 +698,8 @@ SECTIONS {
         data/mystery_gift.o(.rodata);
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
-<<<<<<< HEAD
         src/rhh_copyright.o(.rodata);
-=======
 		src/dexnav.o(.rodata);
->>>>>>> ad514cf3fd0b81f70196a400e411e2cb5dbec36f
     } =0
 
     song_data :

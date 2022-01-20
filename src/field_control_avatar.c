@@ -3,11 +3,8 @@
 #include "bike.h"
 #include "coord_event_weather.h"
 #include "daycare.h"
-<<<<<<< HEAD
 #include "debug.h"
-=======
 #include "dexnav.h"
->>>>>>> ad514cf3fd0b81f70196a400e411e2cb5dbec36f
 #include "faraway_island.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -86,10 +83,7 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->tookStep = FALSE;
     input->pressedBButton = FALSE;
     input->pressedRButton = FALSE;
-<<<<<<< HEAD
     input->input_field_1_0 = FALSE;
-=======
->>>>>>> ad514cf3fd0b81f70196a400e411e2cb5dbec36f
     input->input_field_1_1 = FALSE;
     input->input_field_1_2 = FALSE;
     input->input_field_1_3 = FALSE;
@@ -226,9 +220,8 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
     
-<<<<<<< HEAD
-    if (input->pressedRButton && EnableAutoRun())
-        return TRUE;
+    // if (input->pressedRButton && EnableAutoRun())
+    //     return TRUE;
 
     #ifdef TX_DEBUGGING
         if (!TX_DEBUG_MENU_OPTION)
@@ -241,10 +234,8 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
             }
         }
     #endif
-=======
     if (input->pressedRButton && TryStartDexnavSearch())
         return TRUE;
->>>>>>> ad514cf3fd0b81f70196a400e411e2cb5dbec36f
 
     return FALSE;
 }
