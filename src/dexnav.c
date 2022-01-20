@@ -449,7 +449,7 @@ static void DrawDexNavSearchMonIcon(u16 species, u8 *dst, bool8 owned)
     u8 spriteId;
 
     LoadMonIconPalette(species);
-    spriteId = CreateMonIcon(species, SpriteCB_MonIcon, SPECIES_ICON_X - 6, GetSearchWindowY() + 8, 0, 0xFFFFFFFF, 0);
+    spriteId = CreateMonIcon(species, SpriteCB_MonIcon, SPECIES_ICON_X - 6, GetSearchWindowY() + 8, 0, 0xFFFFFFFF);
     gSprites[spriteId].oam.priority = 0;
     *dst = spriteId;
     
@@ -1064,22 +1064,7 @@ static void Task_DexNavSearch(u8 taskId)
             EndDexNavSearchSetupScript(EventScript_LostSignal, taskId);
         return;
     }
-    
-    if (sDexNavSearchDataPtr->proximity <= CREEPING_PROXIMITY && !gPlayerAvatar.creeping && task->tFrameCount > 60)
-    { //should be creeping but player walks normally
-        if (sDexNavSearchDataPtr->hiddenSearch && !task->tRevealed)
-            EndDexNavSearch(taskId);
-        else
-            EndDexNavSearchSetupScript(EventScript_MovedTooFast, taskId);
-        return;
-    }
-    
-    if (sDexNavSearchDataPtr->proximity <= SNEAKING_PROXIMITY && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_DASH | PLAYER_AVATAR_FLAG_BIKE)) 
-    { // running/biking too close
-        //always do event script, even if player hasn't revealed a hidden mon. It's assumed they would be creeping towards it
-        EndDexNavSearchSetupScript(EventScript_MovedTooFast, taskId);
-        return;
-    }
+
     
     if (ScriptContext2_IsEnabled() == TRUE)
     { // check if script just executed
@@ -1111,7 +1096,7 @@ static void Task_DexNavSearch(u8 taskId)
     }
     
     if (sDexNavSearchDataPtr->hiddenSearch && !task->tRevealed &&
-        (JOY_NEW(R_BUTTON) || (sDexNavSearchDataPtr->proximity < CREEPING_PROXIMITY)))
+        (JOY_NEW(R_BUTTON)))
     {
         PlaySE(SE_DEX_SEARCH);
         ClearStdWindowAndFrameToTransparent(sDexNavSearchDataPtr->windowId, FALSE);
@@ -2000,9 +1985,9 @@ static void TryDrawIconInSlot(u16 species, s16 x, s16 y)
     if (species == SPECIES_NONE)
         CreateNoDataIcon(x, y);   //'X' in slot
     else if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN))
-        CreateMonIcon(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF, 0); //question mark
+        CreateMonIcon(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF); //question mark
     else
-        CreateMonIcon(species, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF, 0);
+        CreateMonIcon(species, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF);
 }
 
 static void DrawSpeciesIcons(void)
@@ -2038,7 +2023,7 @@ static void DrawSpeciesIcons(void)
        else if (species == SPECIES_NONE)
             CreateNoDataIcon(x, y);
         else
-            CreateMonIcon(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF, 0); //question mark if detector mode inactive
+            CreateMonIcon(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF); //question mark if detector mode inactive
     }
 }
 

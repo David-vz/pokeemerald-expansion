@@ -400,6 +400,7 @@ LittlerootTown_EventScript_DaveSign::
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_SYS_DEXNAV_GET
 	msgbox LittlerootTown_Text_DaveSign, MSGBOX_SIGN
 	end
 
