@@ -3,7 +3,11 @@
 #include "bike.h"
 #include "coord_event_weather.h"
 #include "daycare.h"
+<<<<<<< HEAD
 #include "debug.h"
+=======
+#include "dexnav.h"
+>>>>>>> ad514cf3fd0b81f70196a400e411e2cb5dbec36f
 #include "faraway_island.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -82,7 +86,10 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->tookStep = FALSE;
     input->pressedBButton = FALSE;
     input->pressedRButton = FALSE;
+<<<<<<< HEAD
     input->input_field_1_0 = FALSE;
+=======
+>>>>>>> ad514cf3fd0b81f70196a400e411e2cb5dbec36f
     input->input_field_1_1 = FALSE;
     input->input_field_1_2 = FALSE;
     input->input_field_1_3 = FALSE;
@@ -107,10 +114,10 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)
                 input->pressedBButton = TRUE;
-            if (newKeys & R_BUTTON)
-                input->pressedRButton = TRUE;
             if (newKeys & L_BUTTON)
                 input->pressedLButton = TRUE;
+            if (newKeys & R_BUTTON && !FlagGet(FLAG_SYS_DEXNAV_SEARCH))
+                input->pressedRButton = TRUE;
         }
 
         if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
@@ -212,9 +219,14 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         ShowStartMenu();
         return TRUE;
     }
+    
+    if (input->tookStep && TryFindHiddenPokemon())
+        return TRUE;
+    
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
     
+<<<<<<< HEAD
     if (input->pressedRButton && EnableAutoRun())
         return TRUE;
 
@@ -229,6 +241,10 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
             }
         }
     #endif
+=======
+    if (input->pressedRButton && TryStartDexnavSearch())
+        return TRUE;
+>>>>>>> ad514cf3fd0b81f70196a400e411e2cb5dbec36f
 
     return FALSE;
 }

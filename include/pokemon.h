@@ -227,10 +227,11 @@ struct BaseStats
  /* 0x14 */ u8 eggGroup1;
  /* 0x15 */ u8 eggGroup2;
  /* 0x16 */ u16 abilities[NUM_ABILITY_SLOTS];
-            u8 safariZoneFleeRate;
-            u8 bodyColor : 7;
+ /* 0x18 */ u8 safariZoneFleeRate;
+ /* 0x19 */ u8 bodyColor : 7;
             u8 noFlip : 1;
             u8 flags;
+ /* 0x1A */ u8 abilityHidden;            
 };
 
 #include "constants/battle_config.h"
