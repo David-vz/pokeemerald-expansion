@@ -4691,6 +4691,12 @@ extern const u32 gMonShinyPalette_UrshifuRapidStrikeStyle[];
 extern const u32 gMonShinyPalette_ZarudeDada[];
 extern const u32 gMonShinyPalette_CalyrexIceRider[];
 extern const u32 gMonShinyPalette_CalyrexShadowRider[];
+extern const u32 gMonFrontPic_DavidSpade[];
+extern const u32 gMonPalette_DavidSpade[];
+extern const u32 gMonBackPic_DavidSpade[];
+extern const u32 gMonShinyPalette_DavidSpade[];
+extern const u8 gMonIcon_DavidSpade[];
+extern const u8 gMonFootprint_DavidSpade[];
 
 extern const u8 gMonIcon_QuestionMark[];
 extern const u8 gMonIcon_Bulbasaur[];

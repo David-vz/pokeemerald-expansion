@@ -5355,3 +5355,9 @@ const u8 gCalyrexPokedexText[] = _(
     "providing healing and blessings. It\n"
     "reigned over the Galar region in times\n"
     "of yore.");
+
+const u8 gDavidSpadePokedexText[] = _(
+    "David Spade\n"
+    "Like wish spade, but better\n"
+    "Can be summoned with\n"
+    "cardboard cutouts");

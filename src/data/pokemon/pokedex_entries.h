@@ -10787,4 +10787,17 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 256,
         .trainerOffset = 0,
     },
+
+    
+    [NATIONAL_DEX_DAVID_SPADE] =
+    {
+        .categoryName = _("NEW SPECIES"),
+        .height = 11,
+        .weight = 77,
+        .description = gDavidSpadePokedexText,
+        .pokemonScale = 356,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
 };

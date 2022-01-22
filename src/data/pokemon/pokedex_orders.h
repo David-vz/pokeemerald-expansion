@@ -167,6 +167,7 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_CUTIEFLY,
     NATIONAL_DEX_CYNDAQUIL,
 
+    NATIONAL_DEX_DAVID_SPADE,
     NATIONAL_DEX_DARKRAI,
     NATIONAL_DEX_DARMANITAN,
     NATIONAL_DEX_DARTRIX,
@@ -927,6 +928,7 @@ const u16 gPokedexOrder_Alphabetical[] =
 
 const u16 gPokedexOrder_Weight[] =
 {
+    NATIONAL_DEX_DAVID_SPADE,
     NATIONAL_DEX_GASTLY,
     NATIONAL_DEX_HAUNTER,
     NATIONAL_DEX_FLABEBE,
@@ -1970,6 +1972,7 @@ const u16 gPokedexOrder_Weight[] =
 
 const u16 gPokedexOrder_Height[] =
 {
+    NATIONAL_DEX_DAVID_SPADE,
     NATIONAL_DEX_JOLTIK,
     NATIONAL_DEX_FLABEBE,
     NATIONAL_DEX_CUTIEFLY,

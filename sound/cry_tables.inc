@@ -1271,6 +1271,7 @@ gCryTable::
 	@ Calyrex
 	cry_uncomp Cry_CalyrexIceRider
 	cry_uncomp Cry_CalyrexShadowRider
+	cry Cry_DavidSpade
 
 	.align 2
 gCryTable_Reverse::
@@ -2545,3 +2546,5 @@ gCryTable_Reverse::
 	@ Calyrex
 	cry_reverse_uncomp Cry_CalyrexIceRider
 	cry_reverse_uncomp Cry_CalyrexShadowRider
+	@ Custom
+	cry_reverse Cry_DavidSpade

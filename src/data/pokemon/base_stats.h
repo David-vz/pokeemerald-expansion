@@ -33943,4 +33943,33 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
+
+    
+    [SPECIES_DAVID_SPADE] =
+    {
+        .baseHP        = 100,
+        .baseAttack    = 85,
+        .baseDefense   = 80,
+        .baseSpeed     = 150,
+        .baseSpAttack  = 165,
+        .baseSpDefense = 100,
+        .type1 = TYPE_PSYCHIC,
+        .type2 = TYPE_GHOST,
+        .catchRate = 45,
+        .expYield = 340,
+        .evYield_SpAttack  = 3,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 120,
+        .friendship = 100,
+        .growthRate = GROWTH_SLOW,
+        .eggGroup1 = EGG_GROUP_UNDISCOVERED,
+        .eggGroup2 = EGG_GROUP_UNDISCOVERED,
+        #ifdef BATTLE_ENGINE
+            .abilities = {ABILITY_AS_ONE_SHADOW_RIDER, ABILITY_AS_ONE_ICE_RIDER},
+        #else
+            .abilities = {ABILITY_NONE, ABILITY_NONE},
+        #endif
+        .bodyColor = BODY_COLOR_BLACK,
+        .noFlip = FALSE,
+    },
 };
