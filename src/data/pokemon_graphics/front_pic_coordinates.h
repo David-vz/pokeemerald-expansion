@@ -6104,10 +6104,17 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 0,
     },
+    
+    [SPECIES_DUCKLIN] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 5,
+    },
+    
     [SPECIES_DAVID_SPADE] =
     {
         .size = MON_COORDS_SIZE(64, 64),
-        .y_offset = 0,
+        .y_offset = 5,
     },
     // Egg
     [SPECIES_EGG] =

@@ -33945,6 +33945,35 @@ const struct BaseStats gBaseStats[] =
     },
 
     
+    [SPECIES_DUCKLIN] =
+    {
+        .baseHP        = 62,
+        .baseAttack    = 44,
+        .baseDefense   = 50,
+        .baseSpeed     = 55,
+        .baseSpAttack  = 44,
+        .baseSpDefense = 50,
+        .type1 = TYPE_WATER,
+        .type2 = TYPE_FLYING,
+        .catchRate = 190,
+        .expYield = 61,
+        .evYield_HP        = 1,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = 70,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroup1 = EGG_GROUP_WATER_1,
+        .eggGroup2 = EGG_GROUP_FLYING,
+        #ifdef BATTLE_ENGINE
+            .abilities = {ABILITY_KEEN_EYE, ABILITY_BIG_PECKS, ABILITY_HYDRATION},
+        #else
+            .abilities = {ABILITY_KEEN_EYE, ABILITY_NONE},
+        #endif
+        .bodyColor = BODY_COLOR_YELLOW,
+        .noFlip = FALSE,
+    },
+
+    
     [SPECIES_DAVID_SPADE] =
     {
         .baseHP        = 100,

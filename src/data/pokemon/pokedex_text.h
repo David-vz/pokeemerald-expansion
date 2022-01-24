@@ -5356,6 +5356,12 @@ const u8 gCalyrexPokedexText[] = _(
     "reigned over the Galar region in times\n"
     "of yore.");
 
+const u8 gDucklinPokedexText[] = _(
+    "The wild Ducksaint is a\n"
+    "Fat bird that as a secret\n"
+    "unlimited potential to destroy\n"
+    "the whole planet");
+
 const u8 gDavidSpadePokedexText[] = _(
     "David Spade\n"
     "Like wish spade, but better\n"

@@ -9316,6 +9316,15 @@ static const union AnimCmd sAnim_PICHU_SPIKY_EARED_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_DUCKLIN_1[] =
+{
+    ANIMCMD_FRAME(1, 50),
+    ANIMCMD_FRAME(1, 50),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_END,
+};
+
+
 static const union AnimCmd sAnim_DAVID_SPADE_1[] =
 {
     ANIMCMD_FRAME(1, 50),
@@ -14677,6 +14686,12 @@ static const union AnimCmd *const sAnims_PICHU_SPIKY_EARED[] ={
     sAnim_PICHU_SPIKY_EARED_1,
 };
 
+static const union AnimCmd *const sAnims_DUCKLIN[] ={
+    sAnim_GeneralFrame0,
+    sAnim_DUCKLIN_1,
+};
+
+
 static const union AnimCmd *const sAnims_DAVID_SPADE[] ={
     sAnim_GeneralFrame0,
     sAnim_DAVID_SPADE_1,
@@ -15895,6 +15910,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD_FULL(ZARUDE_DADA, sAnims_ZARUDE),
     ANIM_CMD_FULL(CALYREX_ICE_RIDER, sAnims_CALYREX),
     ANIM_CMD_FULL(CALYREX_SHADOW_RIDER, sAnims_CALYREX),
+    ANIM_CMD_FULL(DUCKLIN, sAnims_DUCKLIN),
     ANIM_CMD_FULL(DAVID_SPADE, sAnims_DAVID_SPADE),
     
     ANIM_CMD(EGG),

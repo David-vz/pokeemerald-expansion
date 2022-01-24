@@ -906,7 +906,8 @@ const u32 gMonFrontPic_Glastrier[] = INCBIN_U32("graphics/pokemon/glastrier/fron
 const u32 gMonFrontPic_Spectrier[] = INCBIN_U32("graphics/pokemon/spectrier/front.4bpp.lz");
 const u32 gMonFrontPic_Calyrex[] = INCBIN_U32("graphics/pokemon/calyrex/front.4bpp.lz");
 
-const u32 gMonFrontPic_DavidSpade[] = INCBIN_U32("graphics/pokemon/spadedavid/front.4bpp.lz");
+const u32 gMonFrontPic_Ducklin[] = INCBIN_U32("graphics/pokemon/ducklin/anim_front.4bpp.lz");
+const u32 gMonFrontPic_DavidSpade[] = INCBIN_U32("graphics/pokemon/spadedavid/anim_front.4bpp.lz");
 
 const u32 gMonFrontPic_VenusaurMega[] = INCBIN_U32("graphics/pokemon/mega_venusaur/front.4bpp.lz");
 const u32 gMonFrontPic_CharizardMegaX[] = INCBIN_U32("graphics/pokemon/mega_charizard_x/front.4bpp.lz");
@@ -2054,7 +2055,10 @@ const u32 gMonBackPic_Regidrago[] = INCBIN_U32("graphics/pokemon/regidrago/back.
 const u32 gMonBackPic_Glastrier[] = INCBIN_U32("graphics/pokemon/glastrier/back.4bpp.lz");
 const u32 gMonBackPic_Spectrier[] = INCBIN_U32("graphics/pokemon/spectrier/back.4bpp.lz");
 const u32 gMonBackPic_Calyrex[] = INCBIN_U32("graphics/pokemon/calyrex/back.4bpp.lz");
+
+const u32 gMonBackPic_Ducklin[] = INCBIN_U32("graphics/pokemon/ducklin/back.4bpp.lz");
 const u32 gMonBackPic_DavidSpade[] = INCBIN_U32("graphics/pokemon/spadedavid/back.4bpp.lz");
+
 const u32 gMonBackPic_VenusaurMega[] = INCBIN_U32("graphics/pokemon/mega_venusaur/back.4bpp.lz");
 const u32 gMonBackPic_CharizardMegaX[] = INCBIN_U32("graphics/pokemon/mega_charizard_x/back.4bpp.lz");
 const u32 gMonBackPic_CharizardMegaY[] = INCBIN_U32("graphics/pokemon/mega_charizard_y/back.4bpp.lz");
@@ -3199,6 +3203,8 @@ const u32 gMonPalette_Regidrago[] = INCBIN_U32("graphics/pokemon/regidrago/norma
 const u32 gMonPalette_Glastrier[] = INCBIN_U32("graphics/pokemon/glastrier/normal.gbapal.lz");
 const u32 gMonPalette_Spectrier[] = INCBIN_U32("graphics/pokemon/spectrier/normal.gbapal.lz");
 const u32 gMonPalette_Calyrex[] = INCBIN_U32("graphics/pokemon/calyrex/normal.gbapal.lz");
+
+const u32 gMonPalette_Ducklin[] = INCBIN_U32("graphics/pokemon/ducklin/normal.gbapal.lz");
 const u32 gMonPalette_DavidSpade[] = INCBIN_U32("graphics/pokemon/spadedavid/normal.gbapal.lz");
 const u32 gMonPalette_VenusaurMega[] = INCBIN_U32("graphics/pokemon/mega_venusaur/normal.gbapal.lz");
 const u32 gMonPalette_CharizardMegaX[] = INCBIN_U32("graphics/pokemon/mega_charizard_x/normal.gbapal.lz");
@@ -4371,6 +4377,8 @@ const u32 gMonShinyPalette_Regidrago[] = INCBIN_U32("graphics/pokemon/regidrago/
 const u32 gMonShinyPalette_Glastrier[] = INCBIN_U32("graphics/pokemon/glastrier/shiny.gbapal.lz");
 const u32 gMonShinyPalette_Spectrier[] = INCBIN_U32("graphics/pokemon/spectrier/shiny.gbapal.lz");
 const u32 gMonShinyPalette_Calyrex[] = INCBIN_U32("graphics/pokemon/calyrex/shiny.gbapal.lz");
+
+const u32 gMonShinyPalette_Ducklin[] = INCBIN_U32("graphics/pokemon/ducklin/shiny.gbapal.lz");
 const u32 gMonShinyPalette_DavidSpade[] = INCBIN_U32("graphics/pokemon/spadedavid/shiny.gbapal.lz");
 const u32 gMonShinyPalette_VenusaurMega[] = INCBIN_U32("graphics/pokemon/mega_venusaur/shiny.gbapal.lz");
 const u32 gMonShinyPalette_CharizardMegaX[] = INCBIN_U32("graphics/pokemon/mega_charizard_x/shiny.gbapal.lz");
@@ -5532,6 +5540,7 @@ const u8 gMonIcon_Regidrago[] = INCBIN_U8("graphics/pokemon/regidrago/icon.4bpp"
 const u8 gMonIcon_Glastrier[] = INCBIN_U8("graphics/pokemon/glastrier/icon.4bpp");
 const u8 gMonIcon_Spectrier[] = INCBIN_U8("graphics/pokemon/spectrier/icon.4bpp");
 //const u8 gMonIcon_Calyrex[] = INCBIN_U8("graphics/pokemon/calyrex/icon.4bpp");
+const u8 gMonIcon_Ducklin[] = INCBIN_U8("graphics/pokemon/ducklin/icon.4bpp");
 const u8 gMonIcon_DavidSpade[] = INCBIN_U8("graphics/pokemon/spadedavid/icon.4bpp");
 
 const u8 gMonIcon_VenusaurMega[] = INCBIN_U8("graphics/pokemon/mega_venusaur/icon.4bpp");
@@ -6508,4 +6517,6 @@ const u8 gMonFootprint_Zygarde[] = INCBIN_U8("graphics/pokemon/zygarde/footprint
 const u8 gMonFootprint_Diancie[] = INCBIN_U8("graphics/pokemon/diancie/footprint.1bpp");
 const u8 gMonFootprint_Hoopa[] = INCBIN_U8("graphics/pokemon/hoopa/footprint.1bpp");
 const u8 gMonFootprint_Volcanion[] = INCBIN_U8("graphics/pokemon/volcanion/footprint.1bpp");
+
+const u8 gMonFootprint_Ducklin[] = INCBIN_U8("graphics/pokemon/ducklin/footprint.1bpp");
 const u8 gMonFootprint_DavidSpade[] = INCBIN_U8("graphics/pokemon/spadedavid/footprint.1bpp");

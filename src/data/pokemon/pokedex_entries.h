@@ -10788,6 +10788,18 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
+        [NATIONAL_DEX_DUCKLIN] =
+    {
+        .categoryName = _("Fat Bird"),
+        .height = 3,
+        .weight = 255,
+        .description = gDucklinPokedexText,
+        .pokemonScale = 150,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
     
     [NATIONAL_DEX_DAVID_SPADE] =
     {

@@ -4499,6 +4499,13 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(56, 48),
         .y_offset = 10,
     },
+    
+    [SPECIES_DUCKLIN] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 20,
+    },
+
     [SPECIES_DAVID_SPADE] =
     {
         .size = MON_COORDS_SIZE(64, 64),

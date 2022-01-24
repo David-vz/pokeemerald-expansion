@@ -24752,6 +24752,26 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM11_SUNNY_DAY)
                                             | TMHM(TM12_TAUNT)),
 
+    [SPECIES_DUCKLIN]    = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
+                                            | TMHM(TM45_ATTRACT)
+                                            | TMHM(HM08_DIVE)
+                                            | TMHM(TM32_DOUBLE_TEAM)
+                                            | TMHM(TM42_FACADE)
+                                            | TMHM(HM02_FLY)
+                                            | TMHM(TM21_FRUSTRATION)
+                                            | TMHM(TM07_HAIL)
+                                            | TMHM(TM10_HIDDEN_POWER)
+                                            | TMHM(TM13_ICE_BEAM)
+                                            | TMHM(TM17_PROTECT)
+                                            | TMHM(TM18_RAIN_DANCE)
+                                            | TMHM(TM44_REST)
+                                            | TMHM(TM27_RETURN)
+                                            | TMHM(TM43_SECRET_POWER)
+                                            | TMHM(TM47_STEEL_WING)
+                                            | TMHM(HM03_SURF)
+                                            | TMHM(TM06_TOXIC)
+                                            | TMHM(TM03_WATER_PULSE)),
+
     [SPECIES_DAVID_SPADE]         = TMHM_LEARNSET(TMHM(TM40_AERIAL_ACE)
                                             | TMHM(TM45_ATTRACT)
                                             | TMHM(TM14_BLIZZARD)
